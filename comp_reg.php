@@ -19,6 +19,11 @@ if(isset($_POST['Submit'])){
     $repLname = stripslashes($repLname);
     $pnumber = stripslashes($pnumber);
     $email = stripslashes($email);
+    // add address city county zip 
+    $address = stripslashes($address);
+    $city = stripslashes($city);
+    $country = stripslashes($counrty);
+    $zip = stripslashes($zip);
     
     $cname = mysql_real_escape_string($cname);
     $repFname = mysql_real_escape_string($repFname);
@@ -26,12 +31,18 @@ if(isset($_POST['Submit'])){
     $pnumber = mysql_real_escape_string($pnumber);
     $email = mysql_real_escape_string($email);
     
+    $address = mysql_real_escape_string($address);
+    $city = mysql_real_escape_string($city);
+    $country = mysql_real_escape_string($counrty);
+    $zip = mysql_real_escape_string($zip);
+    
     //select db
     $db = mysql_select_db("csconnect", $connection);
     
     //insert company info into database
-    $query = "INSERT INTO company (name, rep_first_name, rep_last_name, rep_phone, rep_email) 
-    VALUES ('$cname', '$repFname', '$repLname', '$pnumber', '$email')";
+    $query = "INSERT INTO company 
+        (name, rep_first_name, rep_last_name, rep_phone, rep_email, Adress, City, Country, Zip) 
+        VALUES ('$cname', '$repFname', '$repLname', '$pnumber', '$email', '$address', '$city', '$country', '$zip')";
     if(mysql_query($query, $connection)){
         echo "Insert Successful";
     }else{
