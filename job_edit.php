@@ -36,6 +36,13 @@
             width:5em;
             top:auto;
         }
+        .tailcol {
+            min-width:100%;
+            max-width:700px
+        }
+        .subut{
+            text-align: right;
+        }
     </style>    
 </head>
 <body>
@@ -60,63 +67,12 @@
           
         <table id="t01">
             <caption><h2>Job Edit</h2></caption>
-                <tr>
-                    <th class="headcol">Title</th>
-                    <td>
-                        <div contenteditable>Edit me</div>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="headcol">Position</th>
-                    <td>
-                        <div contenteditable>Edit me</div>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="headcol">Type</th>
-                    <td>
-                        <select>
-                            <option value="Full-Time" selected>Full-Time</option>
-                            <option value="Part-Time">Part-Time</option>
-                            <option value="Internship">Internship</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="headcol">Salary</th>
-                    <td>
-                        <div contenteditable>Edit me</div>
-                    </td>
-                </tr>               
-                <tr>
-                    <th class="headcol">City</th>
-                    <td>
-                        <div contenteditable>Edit me</div>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="headcol">Descritpion</th>
-                    <td>
-                        <div contenteditable>Edit me</div>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="headcol">Basic Qualifications</th>
-                    <td>
-                        <div contenteditable>Edit me</div>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="headcol">Preffered Qualifications</th>
-                    <td>
-                        <div contenteditable>Edit me</div>
-                    </td>
-                </tr>
-            </table>
-        
-            <!-- <?php include "comp_home_scr.php" ?> -->
             
-        </table>
+            <?php include "job_edit_scr.php" ?>
+            
+            
+            
+
           
     </div>
     
